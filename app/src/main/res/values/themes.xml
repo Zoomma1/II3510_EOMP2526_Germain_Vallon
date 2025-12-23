@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.II3510_EOMP2526_Germain_Vallon" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
