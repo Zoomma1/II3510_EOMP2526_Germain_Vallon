@@ -4,44 +4,45 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.google.firebase.FirebaseApp
+import isep.fr.ii3510_eomp2526_germain_vallon.ui.navigation.AppNav
+import isep.fr.ii3510_eomp2526_germain_vallon.ui.viewModel.RoomViewModel
+import androidx.activity.viewModels
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import isep.fr.ii3510_eomp2526_germain_vallon.ui.theme.II3510_EOMP2526_Germain_VallonTheme
+import isep.fr.ii3510_eomp2526_germain_vallon.ui.theme.AppBackgroundGradient
+import isep.fr.ii3510_eomp2526_germain_vallon.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
+    private val roomVm: RoomViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
+
+
+        val auth = com.google.firebase.auth.FirebaseAuth.getInstance()
+
+        if (auth.currentUser == null) {
+            auth.signInAnonymously()
+                .addOnFailureListener { e ->
+                    throw e
+                }
+        }
+
         enableEdgeToEdge()
+
         setContent {
-            II3510_EOMP2526_Germain_VallonTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+            AppTheme {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(AppBackgroundGradient)
+                ) {
+                    AppNav(vm = roomVm)
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    II3510_EOMP2526_Germain_VallonTheme {
-        Greeting("Android")
     }
 }

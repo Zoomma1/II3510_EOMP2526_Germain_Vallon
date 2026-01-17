@@ -1,3 +1,46 @@
 <resources>
-    <string name="app_name">II3510_EOMP2526_Germain_Vallon</string>
+    <string name="app_name" translatable="false">Party together!</string>
+
+    <string name="home_title">Home</string>
+
+    <string name="error_prefix">Error: %1$s</string>
+
+    <string name="display_name">Your display name</string>
+    <string name="save_name">Save name</string>
+    <string name="rejoin_last_room">Rejoin last room (%1$s)</string>
+
+    <string name="room_name_create">Room name (create)</string>
+    <string name="create_room_host">Create room (Host)</string>
+
+    <string name="room_code_join">Room code (join)</string>
+    <string name="join_room_guest">Join room (Guest)</string>
+
+    <string name="scan_qr">Scan QR</string>
+
+    <string name="room_title">Room: %1$s</string>
+    <string name="room_code_label">Code: %1$s</string>
+    <string name="role_label">Role: %1$s</string>
+
+    <string name="host_controls">Host controls</string>
+    <string name="play_next">Play next</string>
+    <string name="skip">Skip</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+
+    <string name="playback_controlled_by_host">Playback is controlled by the host (sound only on host phone).</string>
+
+    <string name="search_songs">Search songs:</string>
+    <string name="query">Query</string>
+    <string name="search">Search</string>
+
+    <string name="now_playing">Now playing:</string>
+    <string name="nothing_playing">Nothing playing.</string>
+
+    <string name="up_next">Up next:</string>
+    <string name="queue_empty">Queue is empty.</string>
+
+    <string name="added_by">Added by %1$s</string>
+    <string name="remove">Remove</string>
+
+    <string name="leave_room">Leave room</string>
 </resources>

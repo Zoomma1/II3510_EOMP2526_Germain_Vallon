@@ -1,0 +1,24 @@
+package isep.fr.ii3510_eomp2526_germain_vallon.ui.utils
+
+import android.graphics.Bitmap
+import android.graphics.Color
+import com.google.zxing.BarcodeFormat
+import com.google.zxing.MultiFormatWriter
+import com.google.zxing.common.BitMatrix
+
+fun generateQrBitmap(content: String, size: Int = 512): Bitmap {
+    val matrix: BitMatrix = MultiFormatWriter().encode(
+        content,
+        BarcodeFormat.QR_CODE,
+        size,
+        size
+    )
+
+    val bmp = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
+    for (x in 0 until size) {
+        for (y in 0 until size) {
+            bmp.setPixel(x, y, if (matrix[x, y]) Color.BLACK else Color.WHITE)
+        }
+    }
+    return bmp
+}

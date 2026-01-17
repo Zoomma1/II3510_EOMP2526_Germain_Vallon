@@ -1,0 +1,44 @@
+<resources>
+    <string name="home_title">ホーム</string>
+
+    <string name="error_prefix">エラー: %1$s</string>
+
+    <string name="display_name">表示名</string>
+    <string name="save_name">保存</string>
+    <string name="rejoin_last_room">前回のルームに再参加（%1$s）</string>
+
+    <string name="room_name_create">ルーム名（作成）</string>
+    <string name="create_room_host">ルーム作成（ホスト）</string>
+
+    <string name="room_code_join">ルームコード（参加）</string>
+    <string name="join_room_guest">ルームに参加（ゲスト）</string>
+
+    <string name="scan_qr">QRをスキャン</string>
+
+    <string name="room_title">ルーム: %1$s</string>
+    <string name="room_code_label">コード: %1$s</string>
+    <string name="role_label">役割: %1$s</string>
+
+    <string name="host_controls">ホスト操作</string>
+    <string name="play_next">次を再生</string>
+    <string name="skip">スキップ</string>
+    <string name="pause">一時停止</string>
+    <string name="resume">再開</string>
+
+    <string name="playback_controlled_by_host">再生はホストが操作します（音はホスト端末のみ）。</string>
+
+    <string name="search_songs">曲を検索:</string>
+    <string name="query">検索</string>
+    <string name="search">検索</string>
+
+    <string name="now_playing">再生中:</string>
+    <string name="nothing_playing">再生中の曲はありません。</string>
+
+    <string name="up_next">次の曲:</string>
+    <string name="queue_empty">キューは空です。</string>
+
+    <string name="added_by">%1$s が追加</string>
+    <string name="remove">削除</string>
+
+    <string name="leave_room">退出</string>
+</resources>

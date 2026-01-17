@@ -1,0 +1,44 @@
+<resources>
+    <string name="home_title">Accueil</string>
+
+    <string name="error_prefix">Erreur : %1$s</string>
+
+    <string name="display_name">Ton pseudo</string>
+    <string name="save_name">Enregistrer</string>
+    <string name="rejoin_last_room">Rejoindre la dernière salle (%1$s)</string>
+
+    <string name="room_name_create">Nom de la salle (création)</string>
+    <string name="create_room_host">Créer la salle (Hôte)</string>
+
+    <string name="room_code_join">Code de salle (rejoindre)</string>
+    <string name="join_room_guest">Rejoindre la salle (Invité)</string>
+
+    <string name="scan_qr">Scanner un QR</string>
+
+    <string name="room_title">Salle : %1$s</string>
+    <string name="room_code_label">Code : %1$s</string>
+    <string name="role_label">Rôle : %1$s</string>
+
+    <string name="host_controls">Contrôle hôte</string>
+    <string name="play_next">Lancer la suivante</string>
+    <string name="skip">Passer</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Reprendre</string>
+
+    <string name="playback_controlled_by_host">La lecture est contrôlée par l’hôte (son uniquement sur le téléphone de l’hôte).</string>
+
+    <string name="search_songs">Rechercher des musiques :</string>
+    <string name="query">Recherche</string>
+    <string name="search">Chercher</string>
+
+    <string name="now_playing">En cours :</string>
+    <string name="nothing_playing">Aucune lecture.</string>
+
+    <string name="up_next">À suivre :</string>
+    <string name="queue_empty">La file est vide.</string>
+
+    <string name="added_by">Ajouté par %1$s</string>
+    <string name="remove">Retirer</string>
+
+    <string name="leave_room">Quitter la salle</string>
+</resources>
