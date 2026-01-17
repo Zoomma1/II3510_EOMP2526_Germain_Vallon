@@ -49,7 +49,6 @@ fun HomeScreen(
     var roomName by remember { mutableStateOf("") }
     var roomCode by remember { mutableStateOf("") }
 
-    // Snackbar (toast-like)
     val snackbarHostState = remember { SnackbarHostState() }
     LaunchedEffect(error) {
         if (!error.isNullOrBlank()) {

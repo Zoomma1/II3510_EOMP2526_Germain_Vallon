@@ -43,7 +43,6 @@ fun AppNav(vm: RoomViewModel) {
                 onCodeScanned = { scanned ->
                     // QR contains the room code directly
                     vm.joinRoom(scanned)
-                    // navigation to ROOM happens via LaunchedEffect above when currentRoom != null
                 },
                 onBack = { navController.popBackStack() }
             )

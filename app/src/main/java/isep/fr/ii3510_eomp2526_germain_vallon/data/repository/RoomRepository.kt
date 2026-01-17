@@ -32,7 +32,6 @@ class RoomRepository(
             )
         ).await()
 
-        // Host member doc
         roomDoc.collection("members").document(uid).set(
             mapOf(
                 "displayName" to displayName,

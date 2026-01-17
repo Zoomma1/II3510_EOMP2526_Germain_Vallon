@@ -41,8 +41,6 @@ class RoomScreenViewModel(
 
     private val _state = MutableStateFlow(RoomScreenState(room = room))
     val state: StateFlow<RoomScreenState> = _state
-
-    // Host-only playback
     private var player: HostPlayerController? = null
     private var currentlyPlayingQueueItemId: String? = null
 
@@ -53,7 +51,6 @@ class RoomScreenViewModel(
             }
         }
 
-        // Presence-lite heartbeat
         viewModelScope.launch {
             while (true) {
                 runCatching { roomRepo.heartbeat(room.id) }
@@ -62,7 +59,6 @@ class RoomScreenViewModel(
         }
     }
 
-    // ---- Host playback hooks (same as your Milestone 4) ----
     fun connectHostPlayback(context: Context) {
         if (player != null) return
         val p = HostPlayerController(context.applicationContext)
@@ -117,7 +113,6 @@ class RoomScreenViewModel(
         super.onCleared()
     }
 
-    // ---- Search + queue ----
     fun onSearchQueryChange(q: String) {
         _state.update { it.copy(searchQuery = q) }
     }

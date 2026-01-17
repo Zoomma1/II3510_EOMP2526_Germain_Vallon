@@ -56,7 +56,6 @@ class QueueRepository(
                 )
             } ?: emptyList()
 
-            // Local stable ordering fallback if serverTimestamp is null
             val sorted = items.sortedWith(
                 compareBy<QueueItem> { it.createdAtMillis ?: Long.MAX_VALUE }.thenBy { it.id }
             )
